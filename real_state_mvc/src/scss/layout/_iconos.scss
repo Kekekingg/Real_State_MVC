@@ -1,0 +1,19 @@
+
+@include tablet {
+    .iconos-nosotros {
+        /*Si este mixin no se rodea de otro tamaño que delimite el grid se vera en todos los dispositivos, osea en compus*/
+        @include grid(3, 2rem);
+    }
+}
+
+.icono {
+    text-align: center;
+
+    img {
+        height: 10rem;
+    }
+
+    h3 {
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "erikm/bienesraices_inicio",
+    "description": "Creating a project with POO",
+    "type": "project",
+    "authors": [
+        {
+            "name": "ErikKings",
+            "email": "erikmreyesm@gmail.com"
+        }
+    ],
+    "require": {
+        "intervention/image": "^3.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\" : "./classes"
+        }
+    }
+}
