@@ -1,14 +1,13 @@
 <?php 
 
-require 'funciones.php';
+require 'functions.php';
 require 'config/database.php';
 require __DIR__ . '/../vendor/autoload.php';
 
-// Conectarnos a la BD
+// Connecting to DB
+$db = connectDB();
 
-$db = conectarDB();
-
-use App\ActiveRecord;
+use Model\ActiveRecord;
 
 ActiveRecord::setDB($db);
 

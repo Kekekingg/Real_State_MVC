@@ -12,14 +12,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienes Raices Keke</title>
+    <title>Real State - Keke</title>
     <link rel="stylesheet" href="/build/css/app.css">
 </head>
 <body>
 
-<!-- Isset ayuda a verificar si una funcion esta definida -->
-<header class="header <?php echo $inicio ? 'inicio' : '' ?>">
-    <div class="contenedor contenido-header">
+// isset helps verify if a variable is defined
+<header class="header <?php echo $login ? 'login' : '' ?>">
+    <div class="container contenido-header">
         <div class="barra">
             <a href="/">
                 <img src="/build/img/logo.svg" alt="Logotipo de Bienes Raices"/>
@@ -32,10 +32,10 @@
             <div class="derecha">
                 <img class="dark-mode-boton" src="/build/img/dark-mode.svg" alt="Dark Mode"/>
                 <nav class="navegacion">
-                    <a href="nosotros.php">Nosotros</a>
-                    <a href="anuncios.php">Anuncios</a>
+                    <a href="nosotros.php">About us</a>
+                    <a href="anuncios.php">Listings</a>
                     <a href="blog.php">Blog</a>
-                    <a href="contacto.php">Contacto</a>
+                    <a href="contacto.php">Contact</a>
                     <?php if(!$auth): ?>
                         <a href="login.php">Login</a>
                     <?php endif; ?>
@@ -47,8 +47,8 @@
         </div><!--.barra-->
 
         <?php 
-            if($inicio) {
-                echo "<h1>Venta de Casas y Departamentos Exclusivos de Lujo</h1>";
+            if($login) {
+                echo "<h1>Sale of Exclusive Luxury Houses and Apartments</h1>";
             }
         ?>
     </div>

@@ -1,17 +1,16 @@
-<footer class="footer seccion">
-        <div class="contenedor contenedor-foooter">
+<footer class="footer section">
+        <div class="container container-foooter">
             <nav class="navegacion">
-                    <a href="nosotros.php">Nosotros</a>
-                    <a href="anuncios.php">Anuncios</a>
+                    <a href="about_us.php">About us</a>
+                    <a href="listing.php">Listing</a>
                     <a href="blog.php">Blog</a>
-                    <a href="contacto.php">Contacto</a>
+                    <a href="contact.php">Contact</a>
             </nav>
         </div>
 
-    <!-- Hay que tener cuidado con el date ya que es case sensitive osea que sabe distinguir entre mayusculas y minusculas: si pones "y" solo pondra los ultimos numeros del año en cuestion, si es "Y" pondra el año completo -->
-        <p class="copyright">Todos los derechos Reservados <?php echo date('Y') ?> &copy;</p>
+    <!-- Be careful with the date function since it is case sensitive: it distinguishes between uppercase and lowercase. For example, "y" will only output the last two digits of the year, while "Y" will output the full year -->
+        <p class="copyright">All rights reserved. <?php echo date('Y') ?> &copy;</p>
     </footer>
-    
 
     <script src="/build/js/bundle.min.js"></script>
 </body>
