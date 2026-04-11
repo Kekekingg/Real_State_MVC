@@ -70,7 +70,67 @@ class PropController {
         ]);
 
     }
-    public static function update() {
-        echo "Update Property";
+    public static function update(Router $router) {
+        $id = checkORedirect('/admin');
+
+        $property = PropertyDB::find($id);
+
+        $sellers = Sellers::all();
+
+        $errors = PropertyDB::getErrors();
+
+        // Method POST for update
+        if($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Assign attributes
+            $args = $_POST['property'];
+
+            $property->synchronize($args);
+
+            // Validation
+            $errors = $property->validate();
+
+            // File upload
+            // Generate unique filename
+            $imageName = md5( uniqid(rand(), true) ) . ".jpg";
+
+            if($_FILES['property']['tmp_name']['image']) {
+                $manager = new Image(Driver::class);
+                $image = $manager->read($_FILES['property']['tmp_name']['image'])->cover(800,600);
+                $property->setImage($imageName);
+            }
+
+            if(empty($errors)) {
+                if($_FILES['property']['tmp_name']['image']) {
+                    // Store the image
+                    $image->save(IMAGE_DIRECTORY . $imageName);
+                }
+
+                $property->save();
+            }
+    }
+
+        $router->render('/properties/update', [
+            'property' => $property,
+            'sellers' => $sellers,
+            'errors' => $errors
+        ]);
+    }
+
+    public static function delete() {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            // Validate ID
+            $id = $_POST['id'] ?? null;
+            $id = filter_var($id, FILTER_VALIDATE_INT);
+
+            if($id) {
+                $type = $_POST['type'];
+
+                if(validateCT($type)) {
+                    $propiedad = Sellers::find($id);
+                    $propiedad->delete();
+                }
+            }
+        }
     }
 }

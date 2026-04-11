@@ -1,9 +1,9 @@
 <main class="contenedor seccion">
-        <h1>Create</h1>
+        <h1>Update Property</h1>
 
         <?php foreach($errors as $error): ?>
             <div class="alerta error">
-                <?php echo $error ?>;   
+                <?php echo $error ?>;
             </div>
         <?php endforeach; ?>
 
@@ -12,6 +12,6 @@
         <form class="formulario" method="POST" enctype="multipart/form-data">
             <?php include __DIR__ . '/properties_form.php'; ?>
 
-            <input type="submit" value="Create Property" class="boton boton-verde">
+            <input type="submit" value="Update Property" class="boton boton-verde">
         </form>
 </main>

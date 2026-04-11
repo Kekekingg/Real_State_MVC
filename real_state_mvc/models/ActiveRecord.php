@@ -58,13 +58,13 @@ class ActiveRecord {
         // Sanitizar los datos
         $attributes = $this->sanitizeData();
 
-        $valores = []; //Goes to the object in memory and binds attributes with values
-        foreach($attributes  as $key => $values) {
-            $values[] = "{$key}='{$values}'";
+        $values = []; //Goes to the object in memory and binds attributes with values
+        foreach($attributes as $key => $value) {
+            $values[] = "{$key}='{$value}'";
         }
 
         $query = " UPDATE " . static::$table . " SET ";
-        $query .= join(',',$valores );
+        $query .= join(', ', $values);
         $query .= " WHERE id = '" . self::$db->escape_string($this->id) . "' ";
         $query .= " LIMIT 1 ";
 
