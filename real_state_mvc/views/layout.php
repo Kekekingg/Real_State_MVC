@@ -49,7 +49,7 @@
                     <?php endif; ?>
                 </nav>
             </div>
-        </div><!--.barra-->
+        </div><!--.NavBar-->
 
         <?php 
             if($login) {

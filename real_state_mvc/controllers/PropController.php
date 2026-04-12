@@ -12,13 +12,16 @@ class PropController {
         
         $properties = PropertyDB::all();
 
+        $sellers = Sellers::all();
+
         // Display conditional message
         $result = $_GET['result'] ?? $_GET['resultado'] ?? null;
 
         $router->render('properties/admin' , [
             // Key name is the same as values name for facility
             'properties' => $properties,
-            'result' => $result
+            'result' => $result,
+            'sellers' => $sellers
 
         ]);
     }
@@ -124,11 +127,11 @@ class PropController {
             $id = filter_var($id, FILTER_VALIDATE_INT);
 
             if($id) {
-                $type = $_POST['type'];
+                $type = $_POST['tipo'];
 
                 if(validateCT($type)) {
-                    $propiedad = Sellers::find($id);
-                    $propiedad->delete();
+                    $property = PropertyDB::find($id);
+                    $property->delete();
                 }
             }
         }

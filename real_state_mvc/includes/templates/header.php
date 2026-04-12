@@ -17,7 +17,7 @@
 </head>
 <body>
 
-// isset helps verify if a variable is defined
+<!--  isset helps verify if a variable is defined -->
 <header class="header <?php echo $login ? 'login' : '' ?>">
     <div class="container contenido-header">
         <div class="barra">
