@@ -9,7 +9,7 @@
             </div>
         <?php endforeach; ?>
 
-        <form class="formulario" method="POST" action="/admin/vendedores/crear.php" >
+        <form class="formulario" method="POST" action="/sellers/create" >
 
             <?php include 'sellers_form.php' ?>
             <input type="submit" value="Register Seller" class="boton boton-verde"/>

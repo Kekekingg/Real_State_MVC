@@ -7,7 +7,7 @@
             </div>
         <?php endforeach; ?>
 
-        <a href="/admin" class="boton boton-verde">Back</a>
+        <a href="/admin" class="boton boton-amarillo">Go Back</a>
 
         <form class="formulario" method="POST" enctype="multipart/form-data">
             <?php include __DIR__ . '/properties_form.php'; ?>

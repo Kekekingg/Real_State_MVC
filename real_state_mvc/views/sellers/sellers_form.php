@@ -16,5 +16,5 @@
     <input 
         type="number" id="phone" name="seller[phone]" placeholder="Seller phone" 
         value="<?php echo sanitize($seller->phone); ?>" 
-        required/>
+    />
 </fieldset>

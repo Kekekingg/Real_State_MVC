@@ -22,7 +22,7 @@ class Sellers extends ActiveRecord {
         public function validate() {
 
         if(!$this->name) {
-            self::$errors[] = 'Name must be provided';
+            self::$errors[] = "Name must be provided";
         }
 
         if(!$this->last_name) {
