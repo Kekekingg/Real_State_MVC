@@ -24,7 +24,7 @@
 
 <!-- isset helps verify if a variable is defined -->
 <header class="header <?php echo $login ? 'login' : '' ?>">
-    <div class="container contenido-header">
+    <div class="contenedor contenido-header">
         <div class="barra">
             <a href="/">
                 <img src="/build/img/logo.svg" alt="Logotipo de Bienes Raices"/>
@@ -37,15 +37,15 @@
             <div class="derecha">
                 <img class="dark-mode-boton" src="/build/img/dark-mode.svg" alt="Dark Mode"/>
                 <nav class="navegacion">
-                    <a href="nosotros.php">About us</a>
-                    <a href="anuncios.php">Listings</a>
-                    <a href="blog.php">Blog</a>
-                    <a href="contacto.php">Contact</a>
+                    <a href="/about-us">About us</a>
+                    <a href="/properties">Listings</a>
+                    <a href="/blog">Blog</a>
+                    <a href="/contact">Contact</a>
                     <?php if(!$auth): ?>
                         <a href="login.php">Login</a>
                     <?php endif; ?>
                     <?php if($auth): ?>
-                        <a href="cerrar_sesion.php">Log out</a>
+                        <a href="/log_out">Log out</a>
                     <?php endif; ?>
                 </nav>
             </div>
@@ -62,12 +62,12 @@
 <?php echo $content ?> <!-- Display the layout -->
 
 <footer class="footer section">
-        <div class="container container-foooter">
+        <div class="contenedor contenido-footer">
             <nav class="navegacion">
-                    <a href="about_us.php">About us</a>
-                    <a href="listing.php">Listing</a>
-                    <a href="blog.php">Blog</a>
-                    <a href="contact.php">Contact</a>
+                    <a href="/about_us">About us</a>
+                    <a href="/properties">Listing</a>
+                    <a href="/blog">Blog</a>
+                    <a href="/contact">Contact</a>
             </nav>
         </div>
 

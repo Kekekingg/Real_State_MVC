@@ -2,9 +2,19 @@
 
 namespace Controllers;
 
+use MVC\Router;
+use Model\PropertyDB;
+
 class PageController {
-    public static function index() {
-        echo "From Index";
+    public static function index(Router $router) {
+
+        $properties = PropertyDB::get(3);
+        $login = true;
+
+        $router->render('pages/index', [
+            'properties' => $properties,
+            'login' => $login
+        ]);
     }
 
     public static function aboutUs() {

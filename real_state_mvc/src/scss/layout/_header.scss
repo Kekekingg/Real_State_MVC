@@ -1,8 +1,10 @@
-.no-webp .inicio {
+.header.login,
+.header.inicio {
     background-image: url(../img/header.jpg);
 }
 
-.webp .inicio {
+.webp .header.login,
+.webp .header.inicio {
     background-image: url(../img/header.webp);
 }
 
@@ -10,7 +12,7 @@
     background-color: $grisOscuro;
     padding: 1rem 0 3rem 0;
     
-    &.inicio {
+    &.login {
         background-position: center center;
         background-size: cover;
 
@@ -28,12 +30,12 @@
 
 .contenido-header {
     display: flex;
+    padding-left: 1rem;
     flex-direction: column;
     justify-content: space-between; /* Al cambiar las propiedades del flex el justify-content se comporta ahora verticalemte */
 
     
-    
-    h1 {
+        h1 {
         text-align: left;
         color: $blanco;
         font-weight: bold;
