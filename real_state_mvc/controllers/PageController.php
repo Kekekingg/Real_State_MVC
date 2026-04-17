@@ -44,15 +44,21 @@ class PageController {
         ]);
     }
 
-    public static function blog() {
-        echo "From Blog";
+    public static function blog(Router $router) {
+        $router->render('pages/blog');
     }
 
-    public static function entry() {
-        echo "From Entry";
+    public static function entry(Router $router) {
+        $router->render('pages/entry');
     }
 
-    public static function contact() {
-        echo "From Contact";
+    public static function contact(Router $router) {
+
+        if($_SERVER['REQUEST_METHOD'] === 'POST' ) {
+            debugging($_POST);
+        }
+        $router->render('pages/contact', [
+
+        ]);
     }
 }
