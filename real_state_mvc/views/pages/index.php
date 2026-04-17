@@ -1,31 +1,13 @@
 <main class="contenido seccion">
     <h1>More About Us</h1>
-    <div class="iconos-nosotros">
-        <div class="icono">
-            <img src="build/img/icono1.svg" alt="Security Icon" loading="lazy">
-            <h3>Security</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptate, facere odit in quod iusto commodi facilis beatae fuga velit repudiandae reiciendis, quibusdam eligendi et? Quam voluptatem porro incidunt earum!</p>
-        </div>
-
-        <div class="icono">
-            <img src="build/img/icono2.svg" alt="Price Icon" loading="lazy">
-            <h3>Price</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptate, facere odit in quod iusto commodi facilis beatae fuga velit repudiandae reiciendis, quibusdam eligendi et? Quam voluptatem porro incidunt earum!</p>
-        </div>
-
-        <div class="icono">
-            <img src="build/img/icono3.svg" alt="Time Icon" loading="lazy">
-            <h3>Time</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptate, facere odit in quod iusto commodi facilis beatae fuga velit repudiandae reiciendis, quibusdam eligendi et? Quam voluptatem porro incidunt earum!</p>
-        </div>
-    </div>
+    <?php include 'icons.php' ?>
 </main>
 
 <section class="contenedor">
     <h2>Houses and Apartments for Sale</h2>
 
     <?php 
-        include 'listing.php';
+        include 'ads.php';
     ?> 
 
     <div class="alinear-derecha">

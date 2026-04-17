@@ -4,14 +4,15 @@
 
     
     if($_SERVER['SCRIPT_NAME'] === '/listing.php') {
-        $properties = PropertyDB::all();
+        $listing = PropertyDB::all();
     } else {
-        $properties = PropertyDB::get(3);
+        $listing = PropertyDB::get(3);
     }
+    $properties = $listing; // backward compatibility for views using the old name
 
 ?>
 <div class="container-anuncios">
-    <?php foreach($properties as $property): ?>
+    <?php foreach($listing as $property): ?>
     <div class="anuncio">
 
             <img loading="lazy" src="/imagenes/<?php echo $property->image; ?>" alt="Listing"/>

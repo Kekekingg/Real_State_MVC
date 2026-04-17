@@ -8,25 +8,40 @@ use Model\PropertyDB;
 class PageController {
     public static function index(Router $router) {
 
-        $properties = PropertyDB::get(3);
+        $listing = PropertyDB::get(3);
         $login = true;
 
         $router->render('pages/index', [
-            'properties' => $properties,
+            'listing' => $listing,
             'login' => $login
         ]);
     }
 
-    public static function aboutUs() {
-        echo "From About Us";
+    public static function aboutUs(Router $router) {
+        
+        // Since this is a static view, the array is not required
+        $router->render('/pages/about-us');
     }
 
-    public static function properties() {
-        echo "From Properties";
+    public static function properties(Router $router) {
+
+        $listing = PropertyDB::all();
+
+        $router->render('/pages/listing', [
+            'listing' => $listing
+        ]);
     }
 
-    public static function property() {
-        echo "From Property";
+    public static function property(Router $router) {
+
+        $id = checkORedirect('/listing');
+
+        // Seach the property by ID
+        $property = PropertyDB::find($id);
+
+        $router->render('pages/property', [
+            'property' => $property
+        ]);
     }
 
     public static function blog() {

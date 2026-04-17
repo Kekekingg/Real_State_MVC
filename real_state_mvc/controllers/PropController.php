@@ -10,7 +10,7 @@ use Intervention\Image\ImageManager as Image;
 class PropController {
     public static function index(Router $router) {
         
-        $properties = PropertyDB::all();
+        $listing = PropertyDB::all();
 
         $sellers = Sellers::all();
 
@@ -18,8 +18,8 @@ class PropController {
         $result = $_GET['result'] ?? $_GET['resultado'] ?? null;
 
         $router->render('properties/admin' , [
-            // Key name is the same as values name for facility
-            'properties' => $properties,
+            'listing' => $listing,
+            'properties' => $listing,
             'result' => $result,
             'sellers' => $sellers
 

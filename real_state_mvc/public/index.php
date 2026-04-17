@@ -32,7 +32,7 @@ $router->post('/sellers/delete', [SellerController::class, 'delete']);
 $router->get('/', [PageController::class, 'index']);
 $router->get('/about-us', [PageController::class, 'aboutUs']);
 $router->get('/properties', [PageController::class, 'properties']);
-$router->get('/property', [PageController::class, 'property']);
+$router->get('/listing', [PageController::class, 'property']);
 $router->get('/blog', [PageController::class, 'blog']);
 $router->get('/entry', [PageController::class, 'entry']);
 $router->get('/contact', [PageController::class, 'contact']);

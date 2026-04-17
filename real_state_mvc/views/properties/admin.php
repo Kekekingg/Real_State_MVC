@@ -25,8 +25,8 @@
             </tr>
         </thead>
 
-        <tbody> <!-- Dispaly the properties -->
-            <?php foreach( $properties as $property ): ?>
+        <tbody> <!-- Display the listings -->
+            <?php foreach( $listing as $property ): ?>
             <tr>
                 <td> <?php echo $property->id; ?> </td>
                 <td> <?php echo $property->title; ?> </td>
