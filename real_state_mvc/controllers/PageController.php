@@ -4,6 +4,7 @@ namespace Controllers;
 
 use MVC\Router;
 use Model\PropertyDB;
+use PHPMailer\PHPMailer\PHPMailer;
 
 class PageController {
     public static function index(Router $router) {
@@ -55,8 +56,42 @@ class PageController {
     public static function contact(Router $router) {
 
         if($_SERVER['REQUEST_METHOD'] === 'POST' ) {
-            debugging($_POST);
+
+            // Create new instance of PHPMailer
+            $mail = new PHPMailer();
+
+            // Config SMTP
+            $mail->isSMTP();
+            $mail->Host = 'sandbox.smtp.mailtrap.io';
+            $mail->SMTPAuth = true;
+            $mail->Username = '1aec537547bfb6';
+            $mail->Password = '2e759e6ba294d8';
+            $mail->SMTPSecure = 'tls';
+            $mail->Port = 2525;
+
+            // Configure email content
+            $mail->setFrom('admin@realsstate.com'); //Send the email
+            $mail->addAddress('admin@realsstate.com', 'RealState.com'); // Destination email address
+            $mail->Subject = 'You have a new message';
+
+            // Enable HTML
+            $mail->isHTML(true);
+            $mail->CharSet = 'UTF-8';
+
+            // Define content
+            $content = '<html> <p>You have a new message! </p> </html>';
+
+            $mail->Body = $content;
+            $mail->AltBody = "This is altern text without html";
+
+            // Send Email
+            if($mail->send()) { //Only return true or false
+                echo "Message sent successfully";
+            } else {
+                echo "Message could not be sent";
+            }; 
         }
+
         $router->render('pages/contact', [
 
         ]);
