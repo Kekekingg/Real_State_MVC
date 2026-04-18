@@ -57,6 +57,8 @@ class PageController {
 
         if($_SERVER['REQUEST_METHOD'] === 'POST' ) {
 
+            $serverResponse = $_POST['contact'];
+
             // Create new instance of PHPMailer
             $mail = new PHPMailer();
 
@@ -79,7 +81,18 @@ class PageController {
             $mail->CharSet = 'UTF-8';
 
             // Define content
-            $content = '<html> <p>You have a new message! </p> </html>';
+            $content = '<html>'; 
+            $content .= '<p>You have a new message! </p>';
+            $content .= '<p>Name: ' . $serverResponse['name'] . ' </p>';
+            $content .= '<p>Email: ' . $serverResponse['email'] . ' </p>';
+            $content .= '<p>Phone: ' . $serverResponse['phone'] . ' </p>';
+            $content .= '<p>Message: ' . $serverResponse['message'] . ' </p>';
+            $content .= '<p>Buy or Sell: ' . $serverResponse['type'] . ' </p>';
+            $content .= '<p>Price or Budget: $' . $serverResponse['price'] . ' </p>';
+            $content .= '<p>Preferred way to contact: ' . $serverResponse['contact'] . ' </p>';
+            $content .= '<p>Contact Date: ' . $serverResponse['date'] . ' </p>';
+            $content .= '<p>Time: ' . $serverResponse['time'] . ' </p>';
+            $content .= '</html>';
 
             $mail->Body = $content;
             $mail->AltBody = "This is altern text without html";
