@@ -57,6 +57,8 @@ class PageController {
 
         if($_SERVER['REQUEST_METHOD'] === 'POST' ) {
 
+            $message = null;
+
             $serverResponse = $_POST['contact'];
 
             // Create new instance of PHPMailer
@@ -84,14 +86,24 @@ class PageController {
             $content = '<html>'; 
             $content .= '<p>You have a new message! </p>';
             $content .= '<p>Name: ' . $serverResponse['name'] . ' </p>';
-            $content .= '<p>Email: ' . $serverResponse['email'] . ' </p>';
-            $content .= '<p>Phone: ' . $serverResponse['phone'] . ' </p>';
+            
+
+            // Conditionally send email or phone fields
+            if($serverResponse['contact'] === 'phone') {
+                $content .= '<p>Chose to be contacted by phone:</p>';
+                $content .= '<p>Phone: ' . $serverResponse['phone'] . ' </p>';
+                $content .= '<p>Contact Date: ' . $serverResponse['date'] . ' </p>';
+                $content .= '<p>Time: ' . $serverResponse['time'] . ' </p>';
+            } else {
+                // Is Email, so field email is added
+                $content .= '<p>Chose to be contacted by email:</p>';
+                $content .= '<p>Email: ' . $serverResponse['email'] . ' </p>';
+            }
+
             $content .= '<p>Message: ' . $serverResponse['message'] . ' </p>';
             $content .= '<p>Buy or Sell: ' . $serverResponse['type'] . ' </p>';
             $content .= '<p>Price or Budget: $' . $serverResponse['price'] . ' </p>';
             $content .= '<p>Preferred way to contact: ' . $serverResponse['contact'] . ' </p>';
-            $content .= '<p>Contact Date: ' . $serverResponse['date'] . ' </p>';
-            $content .= '<p>Time: ' . $serverResponse['time'] . ' </p>';
             $content .= '</html>';
 
             $mail->Body = $content;
@@ -99,14 +111,14 @@ class PageController {
 
             // Send Email
             if($mail->send()) { //Only return true or false
-                echo "Message sent successfully";
+                $message = "Message sent successfully";
             } else {
-                echo "Message could not be sent";
+                $message =  "Message could not be sent";
             }; 
         }
 
         $router->render('pages/contact', [
-
+            'message' => $message
         ]);
     }
 }
