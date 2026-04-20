@@ -42,10 +42,10 @@
                     <a href="/blog">Blog</a>
                     <a href="/contact">Contact</a>
                     <?php if(!$auth): ?>
-                        <a href="login.php">Login</a>
+                        <a href="/login">Login</a>
                     <?php endif; ?>
                     <?php if($auth): ?>
-                        <a href="/log_out">Log out</a>
+                        <a href="/logout">Log out</a>
                     <?php endif; ?>
                 </nav>
             </div>

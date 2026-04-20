@@ -83,10 +83,10 @@ class PageController {
             $mail->CharSet = 'UTF-8';
 
             // Define content
-            $content = '<html>'; 
+            $content = '<html>';
             $content .= '<p>You have a new message! </p>';
             $content .= '<p>Name: ' . $serverResponse['name'] . ' </p>';
-            
+
 
             // Conditionally send email or phone fields
             if($serverResponse['contact'] === 'phone') {

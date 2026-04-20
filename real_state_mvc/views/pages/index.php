@@ -18,7 +18,7 @@
 <section class="imagen-contacto">
     <h2>Find the Home of Your Dreams</h2>
     <p>Fill out the contact form and an advisor will get in touch with you shortly</p>
-    <a href="contacto.php" class="boton-amarillo">Contact Us</a>
+    <a href="/contact" class="boton-amarillo">Contact Us</a>
 </section>
 
 <div class="contenedor seccion seccion-inferior">
@@ -35,7 +35,7 @@
             </div>
 
             <div class="texto-entrada">
-                <a href="entrada.php">
+                <a href="/entry">
                     <h4>Rooftop Terrace for Your Home</h4>
                     <p class="informacion-meta">Written on: <span> 20/01/2026</span> by: <span>Admin</span> </p>
 
@@ -56,7 +56,7 @@
             </div>
 
             <div class="texto-entrada">
-                <a href="entrada.php">
+                <a href="/entry">
                     <h4>Guide to Decorating Your Home</h4>
                     <p class="informacion-meta">Written on: <span>20/01/2026</span> by: <span>Admin</span> </p>
 
