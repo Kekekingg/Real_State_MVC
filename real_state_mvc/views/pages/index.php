@@ -1,9 +1,9 @@
-<main class="contenido seccion">
+<main class="contenedor seccion">
     <h1>More About Us</h1>
     <?php include 'icons.php' ?>
 </main>
 
-<section class="contenedor">
+<section class="seccion contenedor">
     <h2>Houses and Apartments for Sale</h2>
 
     <?php 
@@ -37,7 +37,7 @@
             <div class="texto-entrada">
                 <a href="/entry">
                     <h4>Rooftop Terrace for Your Home</h4>
-                    <p class="informacion-meta">Written on: <span> 20/01/2026</span> by: <span>Admin</span> </p>
+                    <p class="meta-information">Written on: <span> 20/01/2026</span> by: <span>Admin</span> </p>
 
                     <p>
                         Tips for building a rooftop terrace with the best materials while saving money.
@@ -58,7 +58,7 @@
             <div class="texto-entrada">
                 <a href="/entry">
                     <h4>Guide to Decorating Your Home</h4>
-                    <p class="informacion-meta">Written on: <span>20/01/2026</span> by: <span>Admin</span> </p>
+                    <p class="meta-information">Written on: <span>20/01/2026</span> by: <span>Admin</span> </p>
 
                     <p>
                         Maximize space in your home with this guide, learn to combine furniture and colors to bring life to your space.

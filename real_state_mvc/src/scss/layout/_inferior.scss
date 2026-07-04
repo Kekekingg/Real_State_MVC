@@ -8,22 +8,23 @@
 
 .entrada-blog {
     margin-bottom: 2rem;
-    
+
     @include tablet {
         display: grid;
         grid-template-columns: 1fr 2fr;
         column-gap: 2rem;
     }
-
     &:last-of-type {
         margin-bottom: 0;
     }
 }
+
 .informacion-meta {
     span {
         color: $amarillo;
     }
 }
+
 .texto-entrada {
     a {
         color: $negro;
@@ -37,7 +38,7 @@
         margin: 0;
         line-height: 1.4;
 
-        /*Pseudo elemento para barra verde debajo del titulo*/
+        /*Pseudo elemento para bar verde debajo del titulo*/
         &::after {
             content: '';
             display: block;
@@ -47,6 +48,5 @@
             margin-top: 1rem;
         }
     }
-    
 
 }

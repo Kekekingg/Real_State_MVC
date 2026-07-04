@@ -17,7 +17,7 @@
                         <p><?php echo $property->parking_space; ?></p>
                     </li>
                     <li>
-                        <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono dormitorio"/>
+                        <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="icon dormitorio"/>
                         <p><?php echo $property->bedrooms; ?></p>
                     </li>
                 </ul>

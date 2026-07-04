@@ -1,13 +1,19 @@
 <?php
 
-function connectDB() : mysqli {
-    $db = mysqli_connect('localhost', 'root','root69', 'bienesraices_crud');
+$db = mysqli_connect(
+    $_ENV['DB_HOST'],
+    $_ENV['DB_USERNAME'],
+    $_ENV['DB_PASSWORD'],
+    $_ENV['DB_NAME']
+);
 
-    if(!$db) {
-        echo "Error: unable to connect";
-        exit;
-    }
-
-    //Return the connection instance
-    return $db;
+if (!$db) {
+    echo "Error: No se pudo conectar a MySQL.";
+    echo "errno de depuración: " . mysqli_connect_errno();
+    echo "error de depuración: " . mysqli_connect_error();
+    exit;
 }
+
+$db->set_charset("utf8");
+
+return $db;

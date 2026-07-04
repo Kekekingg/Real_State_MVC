@@ -35,11 +35,11 @@ function darkMode () {
 }
 
 function eventListeners() {
-    //Apunta a la imagen de las barras de hamburgruesa
+    //Apunta a la imagen de las bars de hamburgruesa
     const mobileMenu = document.querySelector('.mobile-menu');
     
     //Escucha el click, osea cada vez que se da click
-    mobileMenu.addEventListener('click', navegacionResponsive);
+    mobileMenu.addEventListener('click', navigationResponsive);
 
     // Show conditional fields
     const contactMethod = document.querySelectorAll('input[name="contact[contact]"]');
@@ -47,19 +47,19 @@ function eventListeners() {
 }
 
 //Ejecuta o muestra el nav de hamburgruesa
-function navegacionResponsive () {
+function navigationResponsive () {
 
-    const navegacion = document.querySelector('.navegacion');
+    const navigation = document.querySelector('.navigation');
 
-    //Forma 1 de agregar la clase de "mostrar a la navegacion"
-    // if(navegacion.classList.contains('mostrar')) {
-    //     navegacion.classList.remove('mostrar');
+    //Forma 1 de agregar la clase de "mostrar a la navigation"
+    // if(navigation.classList.contains('mostrar')) {
+    //     navigation.classList.remove('mostrar');
     // } else {
-    //     navegacion.classList.add('mostrar');
+    //     navigation.classList.add('mostrar');
     // }
 
     //Forma 2 con toggle (mas limpia y profesional)
-    navegacion.classList.toggle('mostrar')
+    navigation.classList.toggle('mostrar')
 
 }
 
@@ -68,8 +68,8 @@ function showContactMethods(e) {
 
     if(e.target.value === 'phone') {
         contactDiv.innerHTML = `
-            <label for="telefono">Phone Number</label>
-            <input type="tel" placeholder="Your phone" id="telefono" name="contact[phone]"/>
+            <label for="phone">Phone Number</label>
+            <input type="tel" placeholder="Your phone" id="phone" name="contact[phone]"/>
 
             <p>Select the date and time for the call</p>
 

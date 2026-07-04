@@ -1,6 +1,6 @@
 <footer class="footer section">
         <div class="container container-foooter">
-            <nav class="navegacion">
+            <nav class="navigation">
                     <a href="about_us.php">About us</a>
                     <a href="listing.php">Listing</a>
                     <a href="blog.php">Blog</a>

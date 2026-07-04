@@ -17,21 +17,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover luxury properties, exclusive listings, and expert real estate advice with Real State - Keke.">
+    <meta name="author" content="Real State - Keke">
+    <meta property="og:title" content="Real State - Keke">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yoursite.com/">
+    <meta property="og:description" content="Discover luxury properties, exclusive listings, and expert real estate advice with Real State - Keke.">
+    <meta property="og:image" content="/build/img/nosotros.jpg">
     <title>Real State - Keke</title>
     <link rel="stylesheet" href="../build/css/app.css">
+    <link rel="icon" type="image/png" href="../build/img/house.png">
 </head>
 <body>
 
 <!-- isset helps verify if a variable is defined -->
-<header class="header <?php echo $login ? 'login' : '' ?>">
+<header class="header <?php echo $login ? 'login inicio' : '' ?>">
     <div class="contenedor contenido-header">
         <div class="barra">
-            <a href="/">
-                <img src="/build/img/logo.svg" alt="Logotipo de Bienes Raices"/>
+            <a href="/" class="logo">
+                <img src="/build/img/REN.svg" alt="Logo Real Estate"/>
             </a>
 
             <div class="mobile-menu">
-                <img src="/build/img/barras.svg" alt="Icono menu responsive"/>
+                <img src="/build/img/bars.svg" alt="icon menu responsive"/>
             </div>
 
             <div class="derecha">
@@ -61,8 +69,8 @@
 
 <?php echo $content ?> <!-- Display the layout -->
 
-<footer class="footer section">
-        <div class="contenedor contenido-footer">
+<footer class="footer seccion">
+        <div class="contenedor contenedor-footer">
             <nav class="navegacion">
                     <a href="/about_us">About us</a>
                     <a href="/properties">Listing</a>

@@ -1,7 +1,7 @@
 .formulario {
     p {
         font-size: 1.4rem;
-        color:  $grisOscuro;
+        color: $grisOscuro;
         margin: 2rem 0 0 0;
     }
 
@@ -11,13 +11,12 @@
     }
 
     label {
-        font-weight: $bold  ;
+        font-weight: $bold;
         text-transform: uppercase;
         display: block;
     }
-    
     /*Selecciona todo menos lo que esta en el parentesis con el :not*/
-    input:not([type="submit"]),
+    input:not([type="submit"]), 
     textarea,
     select {
         padding: 1rem;
@@ -39,10 +38,8 @@
         justify-content: space-between;
         align-items: center;
     }
-
     input[type="radio"] {
         margin: 0;
         width: auto;
     }
-
 }

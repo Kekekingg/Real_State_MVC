@@ -1,9 +1,8 @@
 .no-webp .imagen-contacto {
-    background-image: url(../img/encuentra.jpg);
+    background-image: url('../img/encuentra.jpg');
 }
-
 .webp .imagen-contacto {
-    background-image: url(../img/encuentra.webp);
+    background-image: url('../img/encuentra.webp');
 }
 
 .imagen-contacto {
@@ -13,15 +12,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2.5rem;
 
     h2 {
         font-size: 4rem;
         font-weight: $black;
         color: $blanco;
     }
-
-    p{
+    p {
         font-size: 1.8rem;
         color: $blanco;
     }

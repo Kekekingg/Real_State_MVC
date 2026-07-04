@@ -1,6 +1,6 @@
 @include tablet {
     .contenedor-anuncios {
-        @include grid(3, 2rem)
+        @include grid(3, 2rem);
     }
 }
 
@@ -16,13 +16,11 @@
     h3, p {
         margin: 0;
     }
-    h3 {
-        font-size: 2.5rem;
-    }
+ 
 }
 .precio {
     color: $verde;
-    font-weight: bold;
+    font-weight: $bold;
     font-size: 3rem;
 }
 
@@ -30,18 +28,20 @@
     display: flex;
     list-style: none;
     padding: 0;
-    max-width: 40rem;
+    max-width: 50rem;
 
     li {
-        flex: 1; /* Los iconos toman todo el espacio disponible 1px c/u*/
+        flex: 1;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: stretch;
 
         img {
-            flex: 0 0 3rem;
-            margin-right: 1rem;
+            flex:  0 0 1rem;
+            margin-right: 1.5rem;
         }
-
-        p{
+        p {
             font-weight: $black;
         }
     }

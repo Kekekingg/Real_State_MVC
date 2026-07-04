@@ -11,38 +11,38 @@
     $properties = $listing; // backward compatibility for views using the old name
 
 ?>
-<div class="container-anuncios">
+<div class="container-ads">
     <?php foreach($listing as $property): ?>
-    <div class="anuncio">
+    <div class="ads">
 
             <img loading="lazy" src="/imagenes/<?php echo $property->image; ?>" alt="Listing"/>
 
-        <div class="contenido-anuncio">
+        <div class="content-ads">
             <h3><?php echo $property->title; ?></h3>
             <p><?php echo $property->description; ?></p>
-            <p class="precio">$ <?php echo $property->price; ?></p>
+            <p class="price">$ <?php echo $property->price; ?></p>
 
-            <ul class="iconos-caracteristicas">
+            <ul class="feature-icons">
                 <li>
-                    <img class="icono" loading="lazy" src="build/img/icono_wc.svg" alt="icono wc"/>
+                    <img class="icon" loading="lazy" src="build/img/icon_wc.svg" alt="icon wc"/>
                     <p><?php echo $property->wc; ?></p>
                 </li>
                 <li>
-                    <img class="icono" loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento"/>
+                    <img class="icon" loading="lazy" src="build/img/icon_estacionamiento.svg" alt="icon estacionamiento"/>
                     <p><?php echo $property->parking_space; ?></p>
                 </li>
                 <li>
-                    <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono dormitorio"/>
+                    <img class="icon" loading="lazy" src="build/img/icon_dormitorio.svg" alt="icon dormitorio"/>
                     <p><?php echo $property->bedrooms; ?></p>
                 </li>
             </ul>
 
-            <a href="anuncio.php?id=<?php echo $property->id; ?>" class="button-seller-block">
+            <a href="ads.php?id=<?php echo $property->id; ?>" class="button-seller-block">
                 See property
             </a>
-        </div><!--.contenido-anuncio-->
-    </div><!--.anuncio-->
+        </div><!--.content-ads-->
+    </div><!--.ads-->
     <?php endforeach; ?>
 
-</div><!--.container-anuncios-->
+</div><!--.container-adss-->
 

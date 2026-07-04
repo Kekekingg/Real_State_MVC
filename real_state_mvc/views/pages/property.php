@@ -9,11 +9,11 @@
 
         <ul class="iconos-caracteristicas">
             <li>
-                <img loading="lazy" src="build/img/icono_wc.svg" alt="icono wc"/>
+                <img loading="lazy" src="build/img/icono_wc.svg" alt="icon wc"/>
                 <p><?php echo $property->wc; ?></p>
             </li>
             <li>
-                <img loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento"/>
+                <img loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icon estacionamiento"/>
                 <p><?php echo $property->parking_space; ?></p>
             </li>
             <li>

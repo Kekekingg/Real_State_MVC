@@ -23,7 +23,7 @@ class Router {
         // Array of protected routes
         $protected_routes = ['/admin', '/properties/create', '/properties/update', '/properties/delete', '/sellers/create', '/sellers/update', '/sellers/delete'];
 
-        $currentURL = $_SERVER['PATH_INFO'] ?? '/';
+        $currentURL = strtok($_SERVER['REQUEST_URI'], '?') ?? '/';
         $method = $_SERVER['REQUEST_METHOD'];
 
         if($method === 'GET') {

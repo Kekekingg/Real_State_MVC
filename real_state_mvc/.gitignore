@@ -1,2 +1,32 @@
-node_modules/
-vendor
+# PHP dependencies
+/vendor/
+
+# Node dependencies
+/node_modules/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Logs and temporary files
+*.log
+*.cache
+*.tmp
+*.temp
+
+# PHP tool caches
+.phpunit.result.cache
+.php_cs.cache
+
+# Editor and IDE settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# System files
+.DS_Store
+Thumbs.db

@@ -55,9 +55,9 @@ class PageController {
 
     public static function contact(Router $router) {
 
-        if($_SERVER['REQUEST_METHOD'] === 'POST' ) {
+        $message = null;
 
-            $message = null;
+        if($_SERVER['REQUEST_METHOD'] === 'POST' ) {
 
             $serverResponse = $_POST['contact'];
 

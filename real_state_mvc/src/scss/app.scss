@@ -4,7 +4,7 @@
 @import 'base/globales';
 @import 'base/utilidades';
 @import 'base/botones';
-@import 'base/darkmode';
+@import 'base/darkMode';
 
 /** UI **/
 @import 'layout/header';
@@ -16,6 +16,7 @@
 @import 'layout/inferior';
 @import 'layout/testimoniales';
 @import 'layout/formularios';
+
 
 /** Paginas Internas **/
 @import 'internas/nosotros';

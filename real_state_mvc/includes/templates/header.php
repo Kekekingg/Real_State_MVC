@@ -17,21 +17,21 @@
 <body>
     
     <header class="header <?php echo $login  ? 'login inicio' : ''; ?>">
-        <div class="contenedor contenido-header">
-            <div class="barra">
+        <div class="container content-header">
+            <div class="bar">
                 <a href="/">
                     <img src="/build/img/logo.svg" alt="Logotipo de Bienes Raices">
                 </a>
 
                 <div class="mobile-menu">
-                    <img src="/build/img/barras.svg" alt="icono menu responsive">
+                    <img src="/build/img/bars.svg" alt="icon menu responsive">
                 </div>
 
-                <div class="derecha">
+                <div class="right">
                     <img class="dark-mode-boton" src="/build/img/dark-mode.svg">
-                    <nav class="navegacion">
+                    <nav class="navigation">
                         <a href="nosotros.php">Nosotros</a>
-                        <a href="anuncios.php">Anuncios</a>
+                        <a href="ads.php">adss</a>
                         <a href="blog.php">Blog</a>
                         <a href="contacto.php">Contacto</a>
                         <?php if($auth): ?>
@@ -40,7 +40,7 @@
                     </nav>
                 </div>
                 
-            </div> <!--.barra-->
+            </div> <!--.bar-->
 
             <?php  echo $login ? "<h1>Venta de Casas y Departamentos Exclusivos de Lujo</h1>" : ''; ?>
         </div>
