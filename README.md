@@ -3,7 +3,7 @@
 
 A full-stack real estate web application built in PHP with a custom MVC architecture. The site lets visitors browse property listings and contact the agency, while a protected admin panel lets staff manage properties and sellers.
 
-Live repo: [Kekekingg/Real_State_MVC](https://github.com/Kekekingg/Real_State_MVC)
+Live repo: [Kekekingg/Real_State_MVC](https://realstate-mvc.alwaysdata.net/)
 
 ## Overview
 
