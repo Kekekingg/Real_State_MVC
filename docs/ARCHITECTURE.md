@@ -116,3 +116,6 @@ Views are plain PHP templates grouped by feature (`auth/`, `pages/`, `properties
 - **ID recycling instead of relying on `AUTO_INCREMENT`.** `ActiveRecord::getNextId()` scans for gaps in existing IDs. This keeps IDs low and sequential for a small demo dataset but adds a query on every insert and could create race conditions under concurrent writes.
 - **No route parameters.** IDs travel through query strings rather than path segments, which is simple but means every "show one record" controller action has to manually validate `$_GET['id']` via `checkORedirect()`.
 - **Hardcoded SMTP credentials.** `PageController::contact` embeds Mailtrap sandbox credentials directly in code rather than reading them from `.env`, even though the project already uses `phpdotenv` elsewhere. See the troubleshooting guide for a suggested fix.
+
+
+[← Back to main README](../README.md)
