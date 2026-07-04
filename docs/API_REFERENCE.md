@@ -149,3 +149,5 @@ Used by `showNoti($code)` in `includes/functions.php` and rendered on the admin 
 | `2` | Updated successfully |
 | `3` | Deleted successfully |
 | other | (no message shown) |
+
+[← Back to main README](../README.md)
