@@ -106,3 +106,5 @@ Queries in `ActiveRecord` and `Admin` are built via string concatenation, with v
 - Shared helpers (`isAuth`, `sanitize`, `validateCT`, `showNoti`, `checkORedirect`) → `includes/functions.php`
 - Full request/response contracts → [`API_REFERENCE.md`](API_REFERENCE.md)
 - System design and data flow → [`ARCHITECTURE.md`](ARCHITECTURE.md)
+
+[← Back to main README](../README.md)
